@@ -213,7 +213,7 @@ server <- function(input, output, session) {
       
       output$confusion_matrix_ui <- renderUI({
         tagList(
-          tags$h3("Confusion matrix with percentages of predictions"),
+          tags$h3("Contingency Table with percentages of predictions"),
           tableOutput("confusion_matrix")
         )
       })
