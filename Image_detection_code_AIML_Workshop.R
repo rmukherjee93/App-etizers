@@ -230,7 +230,7 @@ server <- function(input, output, session) {
       output$training_error <- renderPlot({
         par(mar = c(5, 4, 4, 2) + 0.1)  # Adjust margins
         plot(history$metrics$loss, type = "l", col = "blue", lwd = 2, axes = FALSE, ann = FALSE, frame.plot = TRUE)
-        title(main = "Can you guess if this plot is helpful to your task?", xlab = "Name this Axis", ylab = "Name this Axis")
+        title(main = "Training error vs Epochs (You can use this to tune your learninr rate)", xlab = "Epochs", ylab = "Cross Entropy error")
       })
       
     }, error = function(e) {
